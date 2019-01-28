@@ -59,7 +59,7 @@ https://download.qemu.org/qemu-2.3.0.tar.bz2
 Exctract qemu-2.3.0.tar.bz2:
 
 ```bash
-tar xvfj qemu-2.3.0.atr.bz2
+tar xvfj qemu-2.3.0.tar.bz2
 ```
 
 Copy all the 'src' files of this module to 'qemu-2.3.0/block' directory:
