@@ -5,11 +5,13 @@ This module is based on qemu 2.3.0 version to support zvhd/zvhd2 format convert 
 
 ## How to use this module?
 
-### Requirement
+### Requirements
 
-The development environment for compiling this module consists of: 
+The development environment for compiling this module consists of:
 - qemu 2.3.0 version
 - zstd library
+
+### Requirements CentOS
 
 Install the necessary development packages:
 ```
@@ -18,6 +20,22 @@ Install the necessary development packages:
  yum install zlib-devel
  yum install openssl-devel
  yum install libuuid-devel
+```
+
+### Requirements Debian
+
+Install the necessary development packages:
+
+```bash
+sudo apt-get install -y build-essential \
+	libglib2.0-dev \
+	zlib1g-dev \
+	libssl-dev \
+	uuid-dev \
+	autoconf \
+	autotools-dev \
+	automake \
+	libtool
 ```
 
 ### Compile
@@ -38,9 +56,17 @@ Download qemu 2.3.0 version:
 https://download.qemu.org/qemu-2.3.0.tar.bz2
 ```
 
-Depress qemu-2.3.0.tar.bz2
+Exctract qemu-2.3.0.tar.bz2:
 
-Copy all the 'src' files of this module to 'qemu-2.3.0/block' directory
+```bash
+tar xvfj qemu-2.3.0.atr.bz2
+```
+
+Copy all the 'src' files of this module to 'qemu-2.3.0/block' directory:
+
+```
+cp ~/ims-qemu-img/src/* ~/qemu-2.3.0/block/
+```
 
 Enter the 'qemu-2.3.0' directory,configure and compile
 ```
